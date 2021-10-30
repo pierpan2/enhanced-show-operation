@@ -1,0 +1,16 @@
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.exe.config
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.exe
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.pdb
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.csproj.AssemblyReference.cache
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.Properties.Resources.resources
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.csproj.GenerateResource.cache
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.csproj.CoreCompileInputs.cache
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.exe
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.pdb
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.Shortcut.resources
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.KeySetting.resources
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.MainPanel.resources
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.exe.manifest
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.application
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.exe.manifest
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.application

@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="shortcutDefault_Live2D" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;shortcut&gt;
+	&lt;mode name="Main"&gt;
+		&lt;group name="文件"&gt;
+			&lt;item command="CMD_NEW_MODEL" shortcut="Ctrl+N" /&gt;
+			&lt;item command="CMD_NEW_ANIMATION" shortcut="Ctrl+Shift+N" /&gt;
+			&lt;item command="CMD_OPEN" shortcut="Ctrl+O" /&gt;
+			&lt;item command="CMD_RECENT_FILE_OPEN" shortcut="Ctrl+Shift+O" /&gt;
+			&lt;item command="CMD_DEL_TAB_TABBOX" shortcut="Ctrl+W" /&gt;
+			&lt;item command="CMD_CLOSE_ALL" /&gt;
+			&lt;item command="CMD_SAVE" shortcut="Ctrl+S" /&gt;
+			&lt;item command="CMD_SAVE_AS" shortcut="Ctrl+Shift+S" /&gt;
+			&lt;item command="CMD_MODELING_TEMPLATE" /&gt;
+			&lt;item command="CMD_SHOW_VIEWER" /&gt;
+			&lt;item command="CMD_EXPORT_MODEL_AS_PNG" /&gt;
+			&lt;item command="CMD_EXPORT_MODEL_AS_PSD" shortcut="Ctrl+P" /&gt;
+			&lt;item command="CMD_EXPORT_SCENE_AS_ANIMATED_GIF" /&gt;
+			&lt;item command="CMD_EXPORT_SCENE_AS_PNG" shortcut="Ctrl+I" /&gt;
+			&lt;item command="CMD_EXPORT_EMBEDDED_MODEL" shortcut="Ctrl+Alt+S" /&gt;
+			&lt;item command="CMD_EXPORT_MOTION" shortcut="Ctrl+Alt+Shift+S" /&gt;
+			&lt;item command="CMD_EXPORT_SCENE_AS_VIDEO" shortcut="Ctrl+Shift+M" /&gt;
+			&lt;item command="CMD_GRID_SETTING_SPLIT_INTERVAL" /&gt;
+			&lt;item command="CMD_KEYBOARD_SHORTCUT_SETTING" /&gt;
+			&lt;item command="CMD_SETTING_BACKGROUND_COLOR" /&gt;
+			&lt;item command="CMD_SETTING_RESET_BACKGROUND_COLOR" /&gt;
+			&lt;item command="CMD_MODELING_STATISTICS" /&gt;
+			&lt;item command="CMD_MODEL_SETTING" /&gt;
+			&lt;item command="CMD_RESIZE_MODEL_DOCUMENT" /&gt;
+			&lt;item command="CMD_EXIT" shortcut="Alt+F4" /&gt;
+		&lt;/group&gt;
+		&lt;group name="编辑"&gt;
+			&lt;item command="CMD_UNDO" shortcut="Ctrl+Z" /&gt;
+			&lt;item command="CMD_REDO" shortcut="Ctrl+Y" shortcut2="Ctrl+Shift+Z" /&gt;
+			&lt;item command="CMD_CUT" shortcut="Ctrl+X" /&gt;
+			&lt;item command="CMD_COPY" shortcut="Ctrl+C" /&gt;
+			&lt;item command="CMD_PASTE" shortcut="Ctrl+V" /&gt;
+			&lt;item command="CMD_DELETE" shortcut="Delete" shortcut2="Backspace" /&gt;
+			&lt;item command="CMD_ESC" shortcut="Escape" /&gt;
+			&lt;item command="CMD_SELECT_ALL" shortcut="Ctrl+A" /&gt;
+			&lt;item command="CMD_FIND_OBJECT_DIALOG" shortcut="Ctrl+F" /&gt;
+		&lt;/group&gt;
+		&lt;group name="显示"&gt;
+			&lt;item command="CMD_SHOW_GUI_GUIDE_FOR_MODELING" /&gt;
+			&lt;item command="CMD_SHOW_GUI_GRID" /&gt;
+			&lt;item command="CMD_SETTING_GUIDES_MODELING_SETTING" /&gt;
+			&lt;item command="CMD_HIGH_LIGHT_DEFORMER_CHILD" shortcut="Ctrl+Shift+D" /&gt;
+			&lt;item command="CMD_SHOW_CHILD_UNDER_WARP_DEFORMER_CTRL_MODE" /&gt;
+			&lt;item command="CMD_HIDE_OBJECT_SELECTION" /&gt;
+			&lt;item command="CMD_FOCUS_ON_SELECTED_OBJECTS" shortcut="F" /&gt;
+			&lt;item command="CMD_SHOW_MODEL_BY_RAW_IMAGE" /&gt;
+			&lt;item command="CMD_SHOW_MODEL_BY_TEXTURE_ATLAS" /&gt;
+			&lt;item command="CMD_TOGGLE_DISPLAY_BOUNDINGBOX" /&gt;
+			&lt;item command="CMD_PREVIEW_ONIONSKIN_MODELER" /&gt;
+			&lt;item command="CMD_PREVIEW_ONIONSKIN_ANIMATOR" /&gt;
+			&lt;item command="CMD_PREVIEW_ONIONSKIN_FORM_ANIMATION" /&gt;
+		&lt;/group&gt;
+		&lt;group name="建模"&gt;
+			&lt;item command="CMD_CREATE_WARP_DEFORMER" /&gt;
+			&lt;item command="CMD_CREATE_ROTATION_DEFORMER" /&gt;
+			&lt;item command="CMD_SELECT_PARENT_DEFORMER" shortcut="Ctrl+D" /&gt;
+			&lt;item command="CMD_DELETE_DEFORMER_AND_CHILDREN" shortcut="Ctrl+Delete" /&gt;
+			&lt;item command="CMD_DELETE_DEFORMER_AND_SET_PARAM" /&gt;
+			&lt;item command="CMD_INVERSION_OF_MOVEMENT" /&gt;
+			&lt;item command="CMD_VALIDATE_DEFORMER_DIALOG" /&gt;
+			&lt;item command="CMD_CREATE_ART_PATH_INDIVISUALLY" /&gt;
+			&lt;item command="CMD_CREATE_ART_PATH_COLLECT" /&gt;
+			&lt;item command="CMD_PICK_ART_MESH_COLOR_FOR_ART_PATH" /&gt;
+			&lt;item command="CMD_PICK_ART_MESH_ALPHA_FOR_ART_PATH" /&gt;
+			&lt;item command="CMD_ESTIMATE_LINE_WIDTH" /&gt;
+			&lt;item command="CMD_PICK_ART_MESH_LINE_INFO" /&gt;
+			&lt;item command="CMD_CALIBRATE_ART_PATH_CTRL_POINT" /&gt;
+			&lt;item command="CMD_ADD_NEAR_CTRL_POINT_FOR_SELECTED_ART_MESH_COUNTER" /&gt;
+			&lt;item command="CMD_INSERT_INTER_ART_PATH_POINTS_TO_ALL" /&gt;
+			&lt;item command="CMD_INSERT_INTER_ART_PATH_POINTS_TO_SELECTED_POINTS" /&gt;
+			&lt;item command="CMD_FIT_ART_MESH_CONTOUR" /&gt;
+			&lt;item command="CMD_OPEN_LINE_INFO_PICK_DIALOG" /&gt;
+			&lt;item command="CMD_CREATE_CONTROLLER_EXTENSION_BY_ART_PATH" /&gt;
+			&lt;item command="CMD_EDIT_MULTIKEY_FOR_ARTPATH" /&gt;
+			&lt;item command="CMD_CONNECT_ART_PATH" /&gt;
+			&lt;item command="CMD_DISCONNECT_ART_PATH" /&gt;
+			&lt;item command="CMD_BIND_ART_PATH_POINT_TO_ARTMESH_EXTENSION_TO_ALL" /&gt;
+			&lt;item command="CMD_UNBIND_ART_PATH_POINT_TO_ARTMESH_EXTENSION_TO_ALL" /&gt;
+			&lt;item command="CMD_BIND_ART_PATH_POINT_TO_ARTMESH_EXTENSION" /&gt;
+			&lt;item command="CMD_UNBIND_ART_PATH_POINT_TO_ARTMESH_EXTENSION" /&gt;
+			&lt;item command="CMD_EDIT_WIDTH_ART_PATH_CONTROL_POINT_THICKEN" /&gt;
+			&lt;item command="CMD_EDIT_WIDTH_ART_PATH_CONTROL_POINT_THIN" /&gt;
+			&lt;item command="CMD_TEXTURE_ATLAS" shortcut="Ctrl+T" /&gt;
+			&lt;item command="CMD_CHANGE_ARTMESH_INPUT" shortcut="T" /&gt;
+			&lt;item command="CMD_GENERATE_RAW_IMAGE_FROM_TEXTURE_ATLAS" /&gt;
+			&lt;item command="CMD_AUTO_BLEND_4_CORNER" shortcut="Ctrl+4" /&gt;
+			&lt;item command="CMD_SET_DEFAULT_PARAMETERS" shortcut="Ctrl+1" /&gt;
+			&lt;item command="CMD_SET_SAME_PARAMETERS_TO_ALL_SELECTED" /&gt;
+			&lt;item command="CMD_OPEN_PARAMETER_SETTING" /&gt;
+			&lt;item command="CMD_CHANGE_DEFAULT_KEYFORM_LOCKED" shortcut="Ctrl+Shift+1" /&gt;
+			&lt;item command="CMD_SHOW_EFFECT_SETTING_DIALOG" /&gt;
+			&lt;item command="CMD_EDIT_EXTENSION_INTERPOLATION" /&gt;
+			&lt;item command="CMD_GLUE_CHANGE_ENABLE" /&gt;
+			&lt;item command="CMD_GLUE_SKINNING" /&gt;
+			&lt;item command="CMD_DEFORM_PATH_SKINNING" /&gt;
+			&lt;item command="CMD_ADD_PARAMETER_FOR_ROTATION_DEFORMER" /&gt;
+			&lt;item command="CMD_MODELING_REFLECTION" /&gt;
+			&lt;item command="CMD_RESIZE_ARTMESH_WITH_SCALE" /&gt;
+			&lt;item command="CMD_RESTORE_ORIGINAL_SHAPE" /&gt;
+			&lt;item command="CMD_COPY_SHAPE" shortcut="Ctrl+Shift+C" /&gt;
+			&lt;item command="CMD_PASTE_SHAPE" shortcut="Ctrl+Shift+V" /&gt;
+			&lt;item command="CMD_BLEND_SHAPE" shortcut="Ctrl+Shift+B" /&gt;
+			&lt;item command="CMD_CREATE_FREE_DEFORM_HANDLER_AS_SCALE_MODE" /&gt;
+			&lt;item command="CMD_CREATE_FREE_DEFORM_HANDLER_AS_ROTATE_MODE" /&gt;
+			&lt;item command="CMD_CREATE_FREE_DEFORM_HANDLER_AS_FREE_MODE" /&gt;
+			&lt;item command="CMD_CREATE_FREE_DEFORM_HANDLER_AS_PERSPECTIVE_MODE" /&gt;
+			&lt;item command="CMD_CREATE_FREE_DEFORM_HANDLER_AS_WARP_MODE" /&gt;
+			&lt;item command="CMD_CREATE_WARP_HANDLER" /&gt;
+			&lt;item command="CMD_TWICE_ROW_WARP_HANDLER" /&gt;
+			&lt;item command="CMD_HALF_ROW_WARP_HANDLER" /&gt;
+			&lt;item command="CMD_TWICE_COLUMN_WARP_HANDLER" /&gt;
+			&lt;item command="CMD_HALF_COLUMN_WARP_HANDLER" /&gt;
+			&lt;item command="CMD_CREATE_PATH_HANDLER" /&gt;
+			&lt;item command="CMD_DELETE_TEMPORARY_HANDLER" /&gt;
+			&lt;item command="CMD_SELECTED_OBJECT_UNLOCK" shortcut="Ctrl+2" /&gt;
+			&lt;item command="CMD_NOT_SELECTED_OBJECT_LOCK" shortcut="Ctrl+Shift+2" /&gt;
+			&lt;item command="CMD_ALL_OBJECT_UNLOCK" shortcut="Ctrl+Alt+2" /&gt;
+			&lt;item command="CMD_SELECTED_OBJECT_VISIBLE" shortcut="Ctrl+3" /&gt;
+			&lt;item command="CMD_NOT_SELECTED_OBJECT_HIDE" shortcut="Ctrl+Shift+3" /&gt;
+			&lt;item command="CMD_ALL_OBJECT_SHOW" shortcut="Ctrl+Alt+3" /&gt;
+			&lt;item command="CMD_LOAD_VISIBLE_MAP" /&gt;
+			&lt;item command="CMD_EDIT_LEVEL_1" shortcut="1" /&gt;
+			&lt;item command="CMD_EDIT_LEVEL_2" shortcut="2" /&gt;
+			&lt;item command="CMD_EDIT_LEVEL_3" shortcut="3" /&gt;
+			&lt;item command="CMD_START_OR_END_MESH_EDITOR" shortcut="Ctrl+E" /&gt;
+			&lt;item command="CMD_MESH_EDIT_CONNECT_AUTO" shortcut="Ctrl+R" /&gt;
+			&lt;item command="CMD_MODELING_REFLECTION_H" /&gt;
+			&lt;item command="CMD_MODELING_REFLECTION_V" /&gt;
+			&lt;item command="CMD_GLUE_BIND" shortcut="Ctrl+G" /&gt;
+			&lt;item command="CMD_GLUE_UNBIND" shortcut="Ctrl+Shift+G" /&gt;
+			&lt;item command="CMD_SHOW_VERTEX_INDEX" /&gt;
+			&lt;item command="CMD_GENERATE_MESH_IN_MODELING_MODE" shortcut="Ctrl+Shift+A" /&gt;
+			&lt;item command="CMD_EDIT_MULTIKEY" /&gt;
+			&lt;item command="CMD_EDIT_REVERSE_ALL_KEYS" /&gt;
+		&lt;/group&gt;
+		&lt;group name="动画"&gt;
+			&lt;item command="CMD_RELOAD_MODEL" /&gt;
+			&lt;item command="CMD_REPLACE_MODEL" /&gt;
+			&lt;item command="CMD_REPLACE_MODEL_RESOURCE" /&gt;
+			&lt;item command="CMD_LIPSYNC" /&gt;
+			&lt;item command="CMD_ADD_SCENE" /&gt;
+			&lt;item command="CMD_CREATE_SCENE_FROM_SOUNDS" /&gt;
+			&lt;item command="CMD_BAKE_PHYSICS" /&gt;
+			&lt;item command="CMD_PLAY_STOP" shortcut="Enter" /&gt;
+			&lt;item command="CMD_MOVE_START" shortcut="Home" /&gt;
+			&lt;item command="CMD_MOVE_End" shortcut="End" /&gt;
+			&lt;item command="CMD_MOVE_START_WORKSPACE" shortcut="Shift+Home" /&gt;
+			&lt;item command="CMD_MOVE_End_WORKSPACE" shortcut="Shift+End" /&gt;
+			&lt;item command="CMD_SHOW_FULL_WORKSPACE" shortcut="Shift+F" /&gt;
+			&lt;item command="CMD_SET_START_WORKSPACE" /&gt;
+			&lt;item command="CMD_SET_END_WORKSPACE" /&gt;
+			&lt;item command="CMD_SET_START_TRACK" shortcut="Shift+B" /&gt;
+			&lt;item command="CMD_SET_END_TRACK" shortcut="Shift+N" /&gt;
+			&lt;item command="CMD_MOVE_TRACK_INDICATOR" shortcut="Shift+M" /&gt;
+			&lt;item command="CMD_NEXT_FRAME" shortcut="Page Down" /&gt;
+			&lt;item command="CMD_PREV_FRAME" shortcut="Page Up" /&gt;
+			&lt;item command="CMD_NEXT_KEYFRAME" shortcut="K" /&gt;
+			&lt;item command="CMD_PREV_KEYFRAME" shortcut="J" /&gt;
+			&lt;item command="CMD_NEXT_TRACK_KEYFRAME" shortcut="Shift+K" /&gt;
+			&lt;item command="CMD_PREV_TRACK_KEYFRAME" shortcut="Shift+J" /&gt;
+			&lt;item command="CMD_NEXT_ONIONSKIN_MARKER" shortcut="Ctrl+Shift+K" /&gt;
+			&lt;item command="CMD_PREV_ONIONSKIN_MARKER" shortcut="Ctrl+Shift+J" /&gt;
+			&lt;item command="CMD_SWITCH_EDIT_MODE" shortcut="C" /&gt;
+			&lt;item command="CMD_EXPAND_ALL_CONTAINS" /&gt;
+		&lt;/group&gt;
+		&lt;group name="形状动画"&gt;
+			&lt;item command="CMD_CREATE_FORMANIMATION_KEY" /&gt;
+		&lt;/group&gt;
+		&lt;group name="视窗"&gt;
+			&lt;item command="CMD_CHANGE_WORKSPACE" /&gt;
+			&lt;item command="CMD_CHANGE_WORKSPACE_MODELER" /&gt;
+			&lt;item command="CMD_CHANGE_WORKSPACE_ANIMATOR" /&gt;
+			&lt;item command="CMD_CHANGE_WORKSPACE_FORM_ANIMATION" /&gt;
+			&lt;item command="CMD_HIDE_PALETTE" /&gt;
+			&lt;item command="CMD_RESET_WORKSPACES" /&gt;
+			&lt;item command="CMD_RESET_MAINCANVAS" /&gt;
+		&lt;/group&gt;
+		&lt;group name="帮助"&gt;
+			&lt;item command="CMD_OPEN_MANUAL_PAGE" /&gt;
+			&lt;item command="CMD_OPEN_HOME_PAGE" /&gt;
+			&lt;item command="CMD_OPEN_DOWNLOAD_PAGE" /&gt;
+			&lt;item command="CMD_OPEN_SAMPLE_MODEL_PAGE" /&gt;
+			&lt;item command="CMD_OPEN_COMMUNITY_PAGE" /&gt;
+			&lt;item command="CMD_OPEN_FAQ_PAGE" /&gt;
+			&lt;item command="CMD_REGISTER_LICENSE" /&gt;
+			&lt;item command="CMD_REVOKE_LICENSE" /&gt;
+			&lt;item command="CMD_OPEN_STORE_PAGE" /&gt;
+			&lt;item command="CMD_SHOW_USER_OPERATION" /&gt;
+			&lt;item command="CMD_OPEN_LOG_FILE" /&gt;
+			&lt;item command="CMD_OPEN_BACKUP_DIR" /&gt;
+			&lt;item command="CMD_OPEN_ABOUT" /&gt;
+		&lt;/group&gt;
+		&lt;group name="工具"&gt;
+			&lt;item command="CMD_GENERATE_MESH_IN_MESH_EDITOR_MODE" shortcut="Ctrl+Shift+A" /&gt;
+			&lt;item command="CMD_TOOL_MODE_CREATE_ROTATION_DEFORMER" /&gt;
+			&lt;item command="CMD_TOOL_MODE_ARROW" shortcut="A" /&gt;
+			&lt;item command="CMD_TOOL_MODE_LASSO" shortcut="L" /&gt;
+			&lt;item command="CMD_TOOL_MODE_BLUSH_SELECT" shortcut="B" /&gt;
+			&lt;item command="CMD_TOOL_MODE_DEFORM_PATH" shortcut="P" /&gt;
+			&lt;item command="CMD_TOOL_MODE_DEFORM_BRUSH" /&gt;
+			&lt;item command="CMD_TOOL_MODE_GLUE" /&gt;
+			&lt;item command="CMD_TOOL_MODE_ARTPATH" /&gt;
+			&lt;item command="CMD_CHANGE_MODE" /&gt;
+			&lt;item command="CMD_CHANGE_VIEW_VIEWVERTEX" shortcut="Shift+A" /&gt;
+			&lt;item command="CMD_CHANGE_VIEW_DEFORMER" shortcut="Shift+D" /&gt;
+			&lt;item command="CMD_CHANGE_VIEW_ARTMESH" /&gt;
+			&lt;item command="CMD_SOLO" shortcut="S" /&gt;
+			&lt;item command="CMD_SELECT_OBJECT_BY_SELECTION" /&gt;
+			&lt;item command="CMD_SCREEN_SHOT" shortcut="Ctrl+5" /&gt;
+			&lt;item command="CMD_SCREEN_SHOT_VIEW" shortcut="5" /&gt;
+			&lt;item command="CMD_SCREEN_SHOT_TO_ARTMESH" shortcut="Ctrl+Shift+5" /&gt;
+			&lt;item command="CMD_CAMERA_ZOOM_OUT" /&gt;
+			&lt;item command="CMD_CAMERA_ZOOM_IN" /&gt;
+			&lt;item command="CMD_CAMERA_SET_SCALE_ONE_BY_ONE" /&gt;
+			&lt;item command="CMD_CAMERA_DISPLAY_ALL" shortcut="Ctrl+0" /&gt;
+			&lt;item command="CMD_CAMERA_FLIP_HORIZONTALLY_SCREEN" shortcut="R" /&gt;
+			&lt;item command="CMD_SETTING_GUIDES_MODELING_ADD_HORIZONTAL" /&gt;
+			&lt;item command="CMD_SETTING_GUIDES_MODELING_ADD_VERTICAL" /&gt;
+			&lt;item command="CMD_SETTING_GUIDES_MODELING_ADD_HORIZONTAL_AND_VERTICAL" /&gt;
+		&lt;/group&gt;
+		&lt;group name="快捷方式"&gt;
+			&lt;item command="CMD_PART_PALETTE_CMD_NEW_PART" /&gt;
+			&lt;item command="CMD_PART_PALETTE_CMD_SETTING" /&gt;
+			&lt;item command="CMD_PART_PALETTE_CMD_REMOVE_PART" /&gt;
+			&lt;item command="CMD_PART_PALETTE_CMD_REMOVE_SELECTED_PART_ONLY" /&gt;
+		&lt;/group&gt;
+		&lt;group name="参数快捷方式"&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_CLEAR_SELECTION" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SWITCH_COMBINED" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_PREV_ITEM" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_NEXT_ITEM" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_FIRST_KEY" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_NEXT_KEY" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_PREV_KEY" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_LAST_KEY" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_DEFAULT" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_FIRST_KEY_SEC" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_NEXT_KEY_SEC" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_PREV_KEY_SEC" /&gt;
+			&lt;item command="CMD_PARAMETER_PALETTE_SELECT_LAST_KEY_SEC" /&gt;
+		&lt;/group&gt;
+		&lt;group name="工具细节: 变形路径编辑"&gt;
+			&lt;item command="CMD_TOOL_MODE_CONTROLLER_CONTROLLER_ADD_CONTROLPOINT" /&gt;
+			&lt;item command="CMD_TOOL_MODE_CONTROLLER_CONTROLLER_DELETE_CONTROLPOINT" /&gt;
+			&lt;item command="CMD_TOOL_MODE_CONTROLLER_CONTROLLER_DISCONNECT_CONTROLPOINT" /&gt;
+			&lt;item command="CMD_TOOL_MODE_CONTROLLER_CONTROLLER_SET_CORNER" /&gt;
+		&lt;/group&gt;
+		&lt;group name="工具细节: 编辑胶水"&gt;
+			&lt;item command="CMD_TOOL_MODE_GLUE_WEIGHT_BRUSH_AB" /&gt;
+			&lt;item command="CMD_TOOL_MODE_GLUE_WEIGHT_BRUSH_A" /&gt;
+			&lt;item command="CMD_TOOL_MODE_GLUE_WEIGHT_BRUSH_B" /&gt;
+			&lt;item command="CMD_TOOL_MODE_GLUE_WEIGHT_BRUSH_CLOSER" /&gt;
+		&lt;/group&gt;
+		&lt;group name="工具细节: 图形路径工具"&gt;
+			&lt;item command="CMD_TOOL_MODE_ARTPATH_ADD_ARTPATH_POINT" /&gt;
+			&lt;item command="CMD_TOOL_MODE_ARTPATH_DELETE_ARTPATH_POINT" /&gt;
+			&lt;item command="CMD_TOOL_MODE_ARTPATH_ADJUST_OPACITY" /&gt;
+			&lt;item command="CMD_TOOL_MODE_ARTPATH_ADJUST_WIDTH" /&gt;
+			&lt;item command="CMD_TOOL_MODE_ARTPATH_SET_CORNER" /&gt;
+			&lt;item command="CMD_TOOL_MODE_ARTPATH_CREATE_WITH_STROKE" /&gt;
+			&lt;item command="CMD_TOOL_MODE_ARTPATH_EDIT_WITH_STROKE" /&gt;
+		&lt;/group&gt;
+		&lt;group name="工具细节: 网格编辑模式"&gt;
+			&lt;item command="CMD_TOOL_MODE_MESH_EDIT_ARROW" /&gt;
+			&lt;item command="CMD_TOOL_MODE_MESH_EDIT_POINT_ADD" /&gt;
+			&lt;item command="CMD_TOOL_MODE_MESH_EDIT_POINT_REMOVE" /&gt;
+			&lt;item command="CMD_TOOL_MODE_MESH_EDIT_ERASER" /&gt;
+			&lt;item command="CMD_TOOL_MODE_MESH_EDIT_LASSO" /&gt;
+			&lt;item command="CMD_TOOL_MODE_MESH_EDIT_SUBDIVIDE_MESH" /&gt;
+			&lt;item command="CMD_TOOL_MODE_MESH_EDIT_STROKE_MESH" /&gt;
+			&lt;item command="CMD_STROKE_MESH_EDIT_ADD_WIDTH" /&gt;
+			&lt;item command="CMD_STROKE_MESH_EDIT_REDUCE_WIDTH" /&gt;
+			&lt;item command="CMD_STROKE_MESH_EDIT_ADD_SEGMENT_NUM" /&gt;
+			&lt;item command="CMD_STROKE_MESH_EDIT_REDUCE_SEGMENT_NUM" /&gt;
+			&lt;item command="CMD_STROKE_MESH_EDIT_TOGGLE_TYPE" /&gt;
+			&lt;item command="CMD_STROKE_MESH_EDIT_ON_END_EDIT" shortcut="Shift+E" /&gt;
+		&lt;/group&gt;
+		&lt;group name="临时快照"&gt;
+			&lt;item command="CMD_SAVE_TEMP_SNAP_SHOT_0" /&gt;
+			&lt;item command="CMD_SAVE_TEMP_SNAP_SHOT_1" /&gt;
+			&lt;item command="CMD_SAVE_TEMP_SNAP_SHOT_2" /&gt;
+			&lt;item command="CMD_SAVE_TEMP_SNAP_SHOT_3" /&gt;
+			&lt;item command="CMD_SHOW_TEMP_SNAP_SHOT_0" /&gt;
+			&lt;item command="CMD_SHOW_TEMP_SNAP_SHOT_1" /&gt;
+			&lt;item command="CMD_SHOW_TEMP_SNAP_SHOT_2" /&gt;
+			&lt;item command="CMD_SHOW_TEMP_SNAP_SHOT_3" /&gt;
+		&lt;/group&gt;
+	&lt;/mode&gt;
+&lt;/shortcut&gt;</value>
+  </data>
+  <data name="trans_CN_Live2D" xml:space="preserve">
+    <value>,文件
+新建模型文件,CMD_NEW_MODEL
+新建动画文件,CMD_NEW_ANIMATION
+打开指定文件,CMD_OPEN
+打开最后一次保存关闭的文件,CMD_RECENT_FILE_OPEN
+关闭当前文件,CMD_DEL_TAB_TABBOX
+关闭所有文件,CMD_CLOSE_ALL
+保存,CMD_SAVE
+另存为…,CMD_SAVE_AS
+应用模板,CMD_MODELING_TEMPLATE
+打开物理/场景混合设定,CMD_SHOW_VIEWER
+导出模型为图片,CMD_EXPORT_MODEL_AS_PNG
+导出模型为PSD,CMD_EXPORT_MODEL_AS_PSD
+导出场景为GIF,CMD_EXPORT_SCENE_AS_ANIMATED_GIF
+导出场景为PNG,CMD_EXPORT_SCENE_AS_PNG
+导出为moc3文件,CMD_EXPORT_EMBEDDED_MODEL
+导出动态文件,CMD_EXPORT_MOTION
+导出为视频,CMD_EXPORT_SCENE_AS_VIDEO
+网格设定,CMD_GRID_SETTING_SPLIT_INTERVAL
+键盘快捷键,CMD_KEYBOARD_SHORTCUT_SETTING
+设置背景颜色,CMD_SETTING_BACKGROUND_COLOR
+重设背景颜色,CMD_SETTING_RESET_BACKGROUND_COLOR
+模型统计数据,CMD_MODELING_STATISTICS
+画布设定,CMD_MODEL_SETTING
+重设模型尺寸,CMD_RESIZE_MODEL_DOCUMENT
+退出Editor,CMD_EXIT
+,编辑
+复原,CMD_UNDO
+重做,CMD_REDO
+剪切,CMD_CUT
+复制,CMD_COPY
+粘贴,CMD_PASTE
+删除,CMD_DELETE
+解除选择,CMD_ESC
+全选,CMD_SELECT_ALL
+,显示
+显示辅助线(建模视图),CMD_SHOW_GUI_GUIDE_FOR_MODELING
+显示栅格(建模视图),CMD_SHOW_GUI_GRID
+辅助线设定(建模视图),CMD_SETTING_GUIDES_MODELING_SETTING
+突出显示变形器的子物体,CMD_HIGH_LIGHT_DEFORMER_CHILD
+显示调整弯曲变形器尺寸的子元素,CMD_SHOW_CHILD_UNDER_WARP_DEFORMER_CTRL_MODE
+隐藏选择状态,CMD_HIDE_OBJECT_SELECTION
+突出所选物体,CMD_FOCUS_ON_SELECTED_OBJECTS
+使用模型引导图像显示模型,CMD_SHOW_MODEL_BY_RAW_IMAGE
+使用纹理集显示模型,CMD_SHOW_MODEL_BY_TEXTURE_ATLAS
+显示/隐藏边界框,CMD_TOGGLE_DISPLAY_BOUNDINGBOX
+建模视图,CMD_PREVIEW_ONIONSKIN_MODELER
+动画视图,CMD_PREVIEW_ONIONSKIN_ANIMATOR
+表单动画视图,CMD_PREVIEW_ONIONSKIN_FORM_ANIMATION
+,建模
+创建曲面变形器,CMD_CREATE_WARP_DEFORMER
+创建旋转变形器,CMD_CREATE_ROTATION_DEFORMER
+选择父变形器,CMD_SELECT_PARENT_DEFORMER
+删除变形器及子级,CMD_DELETE_DEFORMER_AND_CHILDREN
+削除变形器并由子物体继承参数,CMD_DELETE_DEFORMER_AND_SET_PARAM
+动作反转,CMD_INVERSION_OF_MOVEMENT
+验证变形器,CMD_VALIDATE_DEFORMER_DIALOG
+从单个图形网格生成图形路径,CMD_CREATE_ART_PATH_INDIVISUALLY
+从多个图形网格生成图形路径,CMD_CREATE_ART_PATH_COLLECT
+从部件为图形路径取色,CMD_PICK_ART_MESH_COLOR_FOR_ART_PATH
+从部件为图形路径取透明度,CMD_PICK_ART_MESH_ALPHA_FOR_ART_PATH
+估计图形路径宽度,CMD_ESTIMATE_LINE_WIDTH
+选取图形路径信息,CMD_PICK_ART_MESH_LINE_INFO
+校准图形路径控制点,CMD_CALIBRATE_ART_PATH_CTRL_POINT
+添加控制点以与图形网格对齐,CMD_ADD_NEAR_CTRL_POINT_FOR_SELECTED_ART_MESH_COUNTER
+在所有图形路径控制点的中间添加一个点,CMD_INSERT_INTER_ART_PATH_POINTS_TO_ALL
+在所选图形路径控制点的中间添加一个点,CMD_INSERT_INTER_ART_PATH_POINTS_TO_SELECTED_POINTS
+适应部件轮廓,CMD_FIT_ART_MESH_CONTOUR
+打开自动生成图新路径对话框,CMD_OPEN_LINE_INFO_PICK_DIALOG
+从图形路径创建变形路径,CMD_CREATE_CONTROLLER_EXTENSION_BY_ART_PATH
+将图形网格的变形烘焙到图形路径,CMD_EDIT_MULTIKEY_FOR_ARTPATH
+连接图形路径,CMD_CONNECT_ART_PATH
+拆分图形路径,CMD_DISCONNECT_ART_PATH
+全部跟随,CMD_BIND_ART_PATH_POINT_TO_ARTMESH_EXTENSION_TO_ALL
+全部取消,CMD_UNBIND_ART_PATH_POINT_TO_ARTMESH_EXTENSION_TO_ALL
+按照所选的控制点,CMD_BIND_ART_PATH_POINT_TO_ARTMESH_EXTENSION
+释放所选控制点,CMD_UNBIND_ART_PATH_POINT_TO_ARTMESH_EXTENSION
+加粗图形路径的控制点,CMD_EDIT_WIDTH_ART_PATH_CONTROL_POINT_THICKEN
+加细图形路径的控制点,CMD_EDIT_WIDTH_ART_PATH_CONTROL_POINT_THIN
+编辑纹理集,CMD_TEXTURE_ATLAS
+切换显示原图和纹理集,CMD_CHANGE_ARTMESH_INPUT
+将纹理集应用于原图（bete）,CMD_GENERATE_RAW_IMAGE_FROM_TEXTURE_ATLAS
+四角形状合成,CMD_AUTO_BLEND_4_CORNER
+重置为默认值,CMD_SET_DEFAULT_PARAMETERS
+对其所选对象的参数配置,CMD_SET_SAME_PARAMETERS_TO_ALL_SELECTED
+参数设置,CMD_OPEN_PARAMETER_SETTING
+锁定默认的变形器,CMD_CHANGE_DEFAULT_KEYFORM_LOCKED
+自动眨眼和口形同步的设定,CMD_SHOW_EFFECT_SETTING_DIALOG
+扩展插值,CMD_EDIT_EXTENSION_INTERPOLATION
+胶水效果开/关,CMD_GLUE_CHANGE_ENABLE
+蒙皮,CMD_GLUE_SKINNING
+变形路径进行蒙皮,CMD_DEFORM_PATH_SKINNING
+生成旋转变形器的参数,CMD_ADD_PARAMETER_FOR_ROTATION_DEFORMER
+反转,CMD_MODELING_REFLECTION
+放大缩小指定倍率,CMD_RESIZE_ARTMESH_WITH_SCALE
+恢复原状,CMD_RESTORE_ORIGINAL_SHAPE
+复制形状,CMD_COPY_SHAPE
+贴上形状,CMD_PASTE_SHAPE
+混合形状,CMD_BLEND_SHAPE
+放大/缩小,CMD_CREATE_FREE_DEFORM_HANDLER_AS_SCALE_MODE
+旋转,CMD_CREATE_FREE_DEFORM_HANDLER_AS_ROTATE_MODE
+自由变形,CMD_CREATE_FREE_DEFORM_HANDLER_AS_FREE_MODE
+透视变形,CMD_CREATE_FREE_DEFORM_HANDLER_AS_PERSPECTIVE_MODE
+斜切变形,CMD_CREATE_FREE_DEFORM_HANDLER_AS_WARP_MODE
+临时弯曲变形,CMD_CREATE_WARP_HANDLER
+增加列,CMD_TWICE_ROW_WARP_HANDLER
+减少列,CMD_HALF_ROW_WARP_HANDLER
+增加行,CMD_TWICE_COLUMN_WARP_HANDLER
+减少行,CMD_HALF_COLUMN_WARP_HANDLER
+临时路径变形,CMD_CREATE_PATH_HANDLER
+解除临时变形工具,CMD_DELETE_TEMPORARY_HANDLER
+锁定/选定所选物体,CMD_SELECTED_OBJECT_UNLOCK
+锁定未选物体,CMD_NOT_SELECTED_OBJECT_LOCK
+全部解锁,CMD_ALL_OBJECT_UNLOCK
+显示/隐藏所选物体,CMD_SELECTED_OBJECT_VISIBLE
+隐藏未选物体,CMD_NOT_SELECTED_OBJECT_HIDE
+显示全部,CMD_ALL_OBJECT_SHOW
+恢复到最新的可见度,CMD_LOAD_VISIBLE_MAP
+1级编辑（精细）,CMD_EDIT_LEVEL_1
+2级编辑（正常）,CMD_EDIT_LEVEL_2
+3级编辑（粗略）,CMD_EDIT_LEVEL_3
+完成网格边缘,CMD_START_OR_END_MESH_EDITOR
+自动结合边缘【线】,CMD_MESH_EDIT_CONNECT_AUTO
+水平反转,CMD_MODELING_REFLECTION_H
+垂直反转,CMD_MODELING_REFLECTION_V
+胶水/绑定选定的顶点,CMD_GLUE_BIND
+取消胶水/取消绑定选定的顶点,CMD_GLUE_UNBIND
+显示图形网格顶点编号,CMD_SHOW_VERTEX_INDEX
+自动网格生成,CMD_GENERATE_MESH_IN_MODELING_MODE
+多键编辑,CMD_EDIT_MULTIKEY
+批量反转,CMD_EDIT_REVERSE_ALL_KEYS
+,动画
+重新加载模型素材,CMD_RELOAD_MODEL
+替换模型素材,CMD_REPLACE_MODEL
+替换模型的纹理(所有场景),CMD_REPLACE_MODEL_RESOURCE
+用音频自动生成口型,CMD_LIPSYNC
+新场景,CMD_ADD_SCENE
+用音频创建场景,CMD_CREATE_SCENE_FROM_SOUNDS
+物理烘焙生成动画,CMD_BAKE_PHYSICS
+播放,CMD_PLAY_STOP
+移至时间轴的起点,CMD_MOVE_START
+移至时间轴的终点,CMD_MOVE_End
+移至工作区的起点,CMD_MOVE_START_WORKSPACE
+移至工作区的终点,CMD_MOVE_End_WORKSPACE
+显示整个工作区,CMD_SHOW_FULL_WORKSPACE
+设工作区的起点为标记,CMD_SET_START_WORKSPACE
+设工作区的终点为标记,CMD_SET_END_WORKSPACE
+设轨的开头为标记,CMD_SET_START_TRACK
+设轨的结束为标记,CMD_SET_END_TRACK
+将轨移动到鼠标,CMD_MOVE_TRACK_INDICATOR
+下一帧,CMD_NEXT_FRAME
+上一帧,CMD_PREV_FRAME
+下一个关键帧,CMD_NEXT_KEYFRAME
+上一个关键帧,CMD_PREV_KEYFRAME
+轨内的下一个关键帧,CMD_NEXT_TRACK_KEYFRAME
+轨内的上一个关键帧,CMD_PREV_TRACK_KEYFRAME
+前往下一个洋葱皮标记,CMD_NEXT_ONIONSKIN_MARKER
+回到上一个洋葱皮标记,CMD_PREV_ONIONSKIN_MARKER
+切换编辑模式,CMD_SWITCH_EDIT_MODE
+展开所有轨,CMD_EXPAND_ALL_CONTAINS
+,形状动画
+创建表单动画关键帧,CMD_CREATE_FORMANIMATION_KEY
+,视窗
+切换工作区,CMD_CHANGE_WORKSPACE
+将工作区切换到Editor,CMD_CHANGE_WORKSPACE_MODELER
+将工作区切换到Animator,CMD_CHANGE_WORKSPACE_ANIMATOR
+将工作区切换到表单动画,CMD_CHANGE_WORKSPACE_FORM_ANIMATION
+隐藏所有面板,CMD_HIDE_PALETTE
+重置工作区,CMD_RESET_WORKSPACES
+重置状态,CMD_RESET_MAINCANVAS
+,帮助
+用户指南,CMD_OPEN_MANUAL_PAGE
+打开Live2D网页,CMD_OPEN_HOME_PAGE
+下载页,CMD_OPEN_DOWNLOAD_PAGE
+模型范例,CMD_OPEN_SAMPLE_MODEL_PAGE
+群组,CMD_OPEN_COMMUNITY_PAGE
+FAQ,CMD_OPEN_FAQ_PAGE
+注册认可证,CMD_REGISTER_LICENSE
+解除许可证,CMD_REVOKE_LICENSE
+打开购买页,CMD_OPEN_STORE_PAGE
+显示操作,CMD_SHOW_USER_OPERATION
+打开记录文件打开自动备份文件夹,CMD_OPEN_LOG_FILE
+更新历史记录,CMD_OPEN_BACKUP_DIR
+关于,CMD_OPEN_ABOUT
+,工具
+自动生成网格（网格编辑模式）,CMD_GENERATE_MESH_IN_MESH_EDITOR_MODE
+旋转变形器创建工具,CMD_TOOL_MODE_CREATE_ROTATION_DEFORMER
+箭头工具,CMD_TOOL_MODE_ARROW
+套索工具,CMD_TOOL_MODE_LASSO
+笔刷选择工具,CMD_TOOL_MODE_BLUSH_SELECT
+变形路径编辑,CMD_TOOL_MODE_DEFORM_PATH
+编辑胶水,CMD_TOOL_MODE_GLUE
+图像路径工具,CMD_TOOL_MODE_ARTPATH
+更改模式,CMD_CHANGE_MODE
+锁定图形网格,CMD_CHANGE_VIEW_VIEWVERTEX
+锁定变形器,CMD_CHANGE_VIEW_DEFORMER
+显示/隐藏图形网格,CMD_CHANGE_VIEW_ARTMESH
+Solo,CMD_SOLO
+选择所选顶点的物体,CMD_SELECT_OBJECT_BY_SELECTION
+快照,CMD_SCREEN_SHOT
+显示/隐藏快照,CMD_SCREEN_SHOT_VIEW
+保存快照参考图,CMD_SCREEN_SHOT_TO_ARTMESH
+缩小,CMD_CAMERA_ZOOM_OUT
+放大,CMD_CAMERA_ZOOM_IN
+显示为原大小,CMD_CAMERA_SET_SCALE_ONE_BY_ONE
+显示全部,CMD_CAMERA_DISPLAY_ALL
+画布反转,CMD_CAMERA_FLIP_HORIZONTALLY_SCREEN
+追加水平线到鼠标位置,CMD_SETTING_GUIDES_MODELING_ADD_HORIZONTAL
+追加垂直线到鼠标位置,CMD_SETTING_GUIDES_MODELING_ADD_VERTICAL
+追加水平/垂直线到鼠标位置,CMD_SETTING_GUIDES_MODELING_ADD_HORIZONTAL_AND_VERTICAL
+,快捷方式
+新部件,CMD_PART_PALETTE_CMD_NEW_PART
+部件设定,CMD_PART_PALETTE_CMD_SETTING
+删除所选部件,CMD_PART_PALETTE_CMD_REMOVE_PART
+删除被选择的部件（保留子项）,CMD_PART_PALETTE_CMD_REMOVE_SELECTED_PART_ONLY
+,参数快捷方式
+取消选择,CMD_PARAMETER_PALETTE_CLEAR_SELECTION
+合并/取消合并,CMD_PARAMETER_PALETTE_SWITCH_COMBINED
+选择上一个,CMD_PARAMETER_PALETTE_SELECT_PREV_ITEM
+选择下一个,CMD_PARAMETER_PALETTE_SELECT_NEXT_ITEM
+选择第一个关键点,CMD_PARAMETER_PALETTE_SELECT_FIRST_KEY
+选择下一个关键点,CMD_PARAMETER_PALETTE_SELECT_NEXT_KEY
+选择上一个关键点,CMD_PARAMETER_PALETTE_SELECT_PREV_KEY
+选择最后一个关键点,CMD_PARAMETER_PALETTE_SELECT_LAST_KEY
+选择默认关键点,CMD_PARAMETER_PALETTE_SELECT_DEFAULT
+选择第一个垂直关键点（结合时）,CMD_PARAMETER_PALETTE_SELECT_FIRST_KEY_SEC
+选择下一个垂直关键点（结合时）,CMD_PARAMETER_PALETTE_SELECT_NEXT_KEY_SEC
+选择上一个垂直关键点（结合时）,CMD_PARAMETER_PALETTE_SELECT_PREV_KEY_SEC
+选择最后一个垂直关键点（结合时）,CMD_PARAMETER_PALETTE_SELECT_LAST_KEY_SEC
+,工具细节:变形路径编辑
+追加控制点,CMD_TOOL_MODE_CONTROLLER_CONTROLLER_ADD_CONTROLPOINT
+删除控制点,CMD_TOOL_MODE_CONTROLLER_CONTROLLER_DELETE_CONTROLPOINT
+删除路径,CMD_TOOL_MODE_CONTROLLER_CONTROLLER_DISCONNECT_CONTROLPOINT
+折线,CMD_TOOL_MODE_CONTROLLER_CONTROLLER_SET_CORNER
+,工具细节:编辑胶水
+重置笔刷A:B,CMD_TOOL_MODE_GLUE_WEIGHT_BRUSH_AB
+重置笔刷A,CMD_TOOL_MODE_GLUE_WEIGHT_BRUSH_A
+重置笔刷B,CMD_TOOL_MODE_GLUE_WEIGHT_BRUSH_B
+吸附胶水,CMD_TOOL_MODE_GLUE_WEIGHT_BRUSH_CLOSER
+,工具细节:图形路径工具
+追加控制点,CMD_TOOL_MODE_ARTPATH_ADD_ARTPATH_POINT
+删除控制点,CMD_TOOL_MODE_ARTPATH_DELETE_ARTPATH_POINT
+调整控制中设置的不透明度,CMD_TOOL_MODE_ARTPATH_ADJUST_OPACITY
+调整设置点中设置的厚度,CMD_TOOL_MODE_ARTPATH_ADJUST_WIDTH
+折线,CMD_TOOL_MODE_ARTPATH_SET_CORNER
+使用笔触创建图形路径,CMD_TOOL_MODE_ARTPATH_CREATE_WITH_STROKE
+使用笔触编辑图形路径,CMD_TOOL_MODE_ARTPATH_EDIT_WITH_STROKE
+,工具细节:网格编辑模式
+选择箭头,CMD_TOOL_MODE_MESH_EDIT_ARROW
+追加顶点,CMD_TOOL_MODE_MESH_EDIT_POINT_ADD
+删除顶点,CMD_TOOL_MODE_MESH_EDIT_POINT_REMOVE
+橡皮擦,CMD_TOOL_MODE_MESH_EDIT_ERASER
+套索绳选择,CMD_TOOL_MODE_MESH_EDIT_LASSO
+增加点,CMD_TOOL_MODE_MESH_EDIT_SUBDIVIDE_MESH
+按笔触划分网格,CMD_TOOL_MODE_MESH_EDIT_STROKE_MESH
+增加网格宽度,CMD_STROKE_MESH_EDIT_ADD_WIDTH
+减少网格宽度,CMD_STROKE_MESH_EDIT_REDUCE_WIDTH
+增加分割,CMD_STROKE_MESH_EDIT_ADD_SEGMENT_NUM
+减少分割,CMD_STROKE_MESH_EDIT_REDUCE_SEGMENT_NUM
+改变网格宽度的顶点数,CMD_STROKE_MESH_EDIT_TOGGLE_TYPE
+笔触的确定,CMD_STROKE_MESH_EDIT_ON_END_EDIT
+,临时快照
+保存[1],CMD_SAVE_TEMP_SNAP_SHOT_0
+保存[2],CMD_SAVE_TEMP_SNAP_SHOT_1
+保存[3],CMD_SAVE_TEMP_SNAP_SHOT_2
+保存[4],CMD_SAVE_TEMP_SNAP_SHOT_3
+显示[1],CMD_SHOW_TEMP_SNAP_SHOT_0
+显示[2],CMD_SHOW_TEMP_SNAP_SHOT_1
+显示[3],CMD_SHOW_TEMP_SNAP_SHOT_2
+显示[4],CMD_SHOW_TEMP_SNAP_SHOT_3</value>
+  </data>
+</root>
