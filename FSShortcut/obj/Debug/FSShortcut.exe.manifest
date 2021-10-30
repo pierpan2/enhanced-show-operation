@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FSShortcut.exe" size="48016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FSShortcut.exe" size="50576">
       <assemblyIdentity name="FSShortcut" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZxbSKDoS/8BJD7YsavYTW0XcVnY0Y6W1mcvbB2uCoWs=</dsig:DigestValue>
+        <dsig:DigestValue>gMDeLZmWQxLcsjseETmTjKvunwtHcduy2yHp7SpEPwg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

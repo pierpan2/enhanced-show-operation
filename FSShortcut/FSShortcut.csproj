@@ -83,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clickmonitor.cs" />
+    <Compile Include="InputShortcut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputShortcut.Designer.cs">
+      <DependentUpon>InputShortcut.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InputShortcut.resx">
+      <DependentUpon>InputShortcut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KeySetting.resx">
       <DependentUpon>KeySetting.cs</DependentUpon>
     </EmbeddedResource>

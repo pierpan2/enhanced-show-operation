@@ -11,6 +11,11 @@ namespace FSShortcut
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
+        ///
+
+        public static string gobalKey = "";
+        public static bool changeShortcut = false;
+
         [STAThread]
         static void Main()
         {

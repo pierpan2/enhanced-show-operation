@@ -14,3 +14,4 @@ C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.e
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.application
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.exe.manifest
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.application
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.InputShortcut.resources
