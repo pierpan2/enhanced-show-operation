@@ -19,6 +19,7 @@ namespace FSShortcut
     {
         ToolTip tp = new ToolTip();
         Shortcut mesBox = new Shortcut("");
+        clickmonitor.KeyboardHook k_hook = new clickmonitor.KeyboardHook();
         //private object pivotGridControl1;
         Dictionary<string, List<string>> shortcuts = new Dictionary<string, List<string>>();
         static List<string> CONTROL_KEYS = new List<string>() {"LShiftKey", "LControlKey", "LMenu", "RShiftKey", "RControlKey", "RMenu", "LWin", "RWin" };
@@ -30,18 +31,16 @@ namespace FSShortcut
             tp.ShowAlways = true;
             // this.Opacity = 0.8;
 
-            // 全局键盘监听
-            var k_hook = new clickmonitor.KeyboardHook();
-            k_hook.KeyDownEvent += new KeyEventHandler(hook_KeyDown);//钩住键按下   
-            //k_hook.KeyPressEvent += Hook_KeyPressEvent;
-            k_hook.Start();//安装键盘钩子
+            Timer timer1 = new Timer();
+            timer1.Interval = 1000;
+            timer1.Enabled = true;
+            timer1.Tick += new EventHandler(timer1EventProcessor);
         }
 
         private void hook_KeyDown(object sender, KeyEventArgs e)
         {
             string funcKey = e.KeyData.ToString();
             string ctrlKeys = Control.ModifierKeys.ToString();
-            Program.gobalKey = "";
             if (CONTROL_KEYS.Contains(funcKey))
             {
                 return;
@@ -60,21 +59,22 @@ namespace FSShortcut
                 label1.Text = "";
                 foreach (string command in shortcuts[combinedKey])
                 {
-                    // Console.WriteLine(command);
+                    Console.WriteLine(command);
                     label1.Text += (label1.Text == "" ? "" : "\n") + command;
                 }
-                label1.Location = new Point( (this.Width - label1.Width) / 2, label1.Location.Y);
-                showTip(label1.Text);
+                label1.Location = new Point((this.Width - label1.Width) / 2, label1.Location.Y);
+                if (!Program.settingMode)
+                {
+                    showTip(label1.Text);
+                }
             }
-            Program.gobalKey = combinedKey;
-
-            // Console.WriteLine(Program.gobalKey);
 
 
         }
 
         private void showTip(string tip)
         {
+            if (tip == "") return;
             //mesBox.DialogResult = DialogResult.Cancel;
             mesBox.Dispose();
             mesBox = new Shortcut(tip);
@@ -108,6 +108,15 @@ namespace FSShortcut
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        public void timer1EventProcessor(object source, EventArgs e)
+        {
+            k_hook.Stop();
+            k_hook = new clickmonitor.KeyboardHook();
+            // 全局键盘监听
+            k_hook.KeyDownEvent += new KeyEventHandler(hook_KeyDown);//钩住键按下   
+            //k_hook.KeyPressEvent += Hook_KeyPressEvent;
+            k_hook.Start();//安装键盘钩子
         }
     }
    

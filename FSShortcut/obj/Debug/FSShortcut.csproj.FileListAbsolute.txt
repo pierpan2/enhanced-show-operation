@@ -10,8 +10,3 @@ C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.p
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.Shortcut.resources
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.KeySetting.resources
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.MainPanel.resources
-C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.exe.manifest
-C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\FSShortcut.application
-C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.exe.manifest
-C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.application
-C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.InputShortcut.resources

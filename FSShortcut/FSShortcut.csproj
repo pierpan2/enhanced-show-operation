@@ -33,7 +33,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -56,7 +56,7 @@
     <ManifestKeyFile>FSShortcut_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
@@ -67,6 +67,12 @@
   <PropertyGroup>
     <StartupObject>
     </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -83,12 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clickmonitor.cs" />
-    <Compile Include="InputShortcut.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InputShortcut.Designer.cs">
-      <DependentUpon>InputShortcut.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +109,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="InputShortcut.resx">
-      <DependentUpon>InputShortcut.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="KeySetting.resx">
       <DependentUpon>KeySetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +128,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.manifest" />
     <None Include="FSShortcut_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

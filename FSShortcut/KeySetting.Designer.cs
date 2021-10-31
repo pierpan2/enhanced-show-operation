@@ -31,6 +31,7 @@ namespace FSShortcut
         {
             this.shortcutGrid = new System.Windows.Forms.DataGridView();
             this.LoadLive2D = new System.Windows.Forms.Button();
+            this.clearAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.shortcutGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@ namespace FSShortcut
             this.shortcutGrid.RowTemplate.Height = 27;
             this.shortcutGrid.Size = new System.Drawing.Size(671, 316);
             this.shortcutGrid.TabIndex = 0;
-            this.shortcutGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.shortcutGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.shortcutGrid_CellClick);
+            this.shortcutGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.shortcutGrid_CellValueChanged);
             // 
             // LoadLive2D
             // 
@@ -61,15 +63,29 @@ namespace FSShortcut
             this.LoadLive2D.UseVisualStyleBackColor = true;
             this.LoadLive2D.Click += new System.EventHandler(this.LoadLive2D_Click);
             // 
+            // clearAll
+            // 
+            this.clearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clearAll.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.clearAll.Location = new System.Drawing.Point(262, 394);
+            this.clearAll.Name = "clearAll";
+            this.clearAll.Size = new System.Drawing.Size(140, 51);
+            this.clearAll.TabIndex = 2;
+            this.clearAll.Text = "清空";
+            this.clearAll.UseVisualStyleBackColor = true;
+            this.clearAll.Click += new System.EventHandler(this.clearAll_Click);
+            // 
             // KeySetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 457);
+            this.Controls.Add(this.clearAll);
             this.Controls.Add(this.LoadLive2D);
             this.Controls.Add(this.shortcutGrid);
             this.Name = "KeySetting";
             this.Text = "KeySetting";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KeySetting_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.shortcutGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -79,5 +95,6 @@ namespace FSShortcut
 
         private System.Windows.Forms.DataGridView shortcutGrid;
         private System.Windows.Forms.Button LoadLive2D;
+        private System.Windows.Forms.Button clearAll;
     }
 }

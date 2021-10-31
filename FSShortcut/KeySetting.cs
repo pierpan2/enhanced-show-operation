@@ -28,9 +28,12 @@ namespace FSShortcut
             shortcutGrid.Columns[0].Width = 250;
             shortcutGrid.Columns.Add("快捷键", "快捷键");
             refreshDGV();
+            shortcutGrid.Columns[0].ReadOnly = true;
+            shortcutGrid.Columns[1].ReadOnly = false;
+            Program.settingMode = true;
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void shortcutGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.ColumnIndex == 0)
             {
@@ -39,21 +42,6 @@ namespace FSShortcut
         }
         private void SetShortcut(int row, int col)
         {
-            InputShortcut inputShortcut = new InputShortcut();
-            inputShortcut.ShowDialog();
-            Console.WriteLine(Program.changeShortcut);
-            Console.WriteLine(row.ToString() + "  " + col.ToString());
-            Console.WriteLine(Program.gobalKey);
-            if (Program.changeShortcut)
-            {
-                shortcuts.Remove(shortcutGrid.Rows[row].Cells[col].Value.ToString());
-                if(!shortcuts.ContainsKey(Program.gobalKey))
-                {
-                    shortcuts.Add(Program.gobalKey, new List<string>());
-                }
-                shortcuts[Program.gobalKey].Add(shortcutGrid.Rows[row].Cells[col + 1].Value.ToString());
-                shortcutGrid.Rows[row].Cells[col].Value = Program.gobalKey;
-            }
         }
         private void LoadLive2D_Click(object sender, EventArgs e)
         {
@@ -65,7 +53,7 @@ namespace FSShortcut
             shortcutGrid.Rows.Clear();
             foreach (KeyValuePair<string, List<string>> shortcut in shortcuts)
             {
-                foreach (string function in shortcut.Value)
+                foreach (String function in shortcut.Value)
                 {
                     shortcutGrid.Rows.Add(shortcut.Key, function);
                 }
@@ -153,5 +141,31 @@ namespace FSShortcut
             }
         }
 
+        private void shortcutGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            List<string> newShortcuts = new List<string>();
+            string shortcut = shortcutGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            // string operation = shortcutGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            foreach (DataGridViewRow row in shortcutGrid.Rows)
+            {
+                if(row.Cells[0].Value != null && row.Cells[0].Value.ToString() == shortcut)
+                {
+                    newShortcuts.Add(row.Cells[1].Value.ToString());
+                }
+            }
+            shortcuts[shortcutGrid.Rows[e.RowIndex].Cells[0].Value.ToString()] = newShortcuts;
+            refreshDGV();
+        }
+
+        private void KeySetting_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.settingMode = false;
+        }
+
+        private void clearAll_Click(object sender, EventArgs e)
+        {
+            shortcuts = new Dictionary<string, List<string>>();
+            shortcutGrid.Rows.Clear();
+        }
     }
 }

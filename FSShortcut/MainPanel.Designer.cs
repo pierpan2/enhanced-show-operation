@@ -29,9 +29,7 @@ namespace FSShortcut
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SettingBut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -46,10 +44,6 @@ namespace FSShortcut
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // SettingBut
             // 
@@ -79,7 +73,6 @@ namespace FSShortcut
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button SettingBut;
     }
 }
