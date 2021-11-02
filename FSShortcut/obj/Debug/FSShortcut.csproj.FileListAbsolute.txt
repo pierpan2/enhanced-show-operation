@@ -12,3 +12,6 @@ C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.K
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.MainPanel.resources
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.InputShortcut.resources
 C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.IntroNSetting.resources
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dell\Documents\OBSShortcut\FSShortcut\FSShortcut\obj\Debug\FSShortcut.csproj.CopyComplete

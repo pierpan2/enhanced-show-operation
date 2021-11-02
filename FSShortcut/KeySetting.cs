@@ -100,14 +100,18 @@ namespace FSShortcut
             shortcuts.Clear();
             // 如果AppData->Live2D里有改键后的xml
             DirectoryInfo xmlLoc = new DirectoryInfo(AppData + @"\Live2D\Cubism4_Editor\settings");
-            foreach (FileInfo file in xmlLoc.GetFiles())
+            try
             {
-                if (file.Name.StartsWith("shortcut"))
+                foreach (FileInfo file in xmlLoc.GetFiles())
                 {
-                    PreloadXML(file.Directory.ToString() + @"\" + file.Name);
-                    break;
+                    if (file.Name.StartsWith("shortcut"))
+                    {
+                        PreloadXML(file.Directory.ToString() + @"\" + file.Name);
+                        break;
+                    }
                 }
             }
+            catch { }
             // 没有的话，用预置的默认快捷键
             if (shortcuts.Count == 0)
             {

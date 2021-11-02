@@ -12,6 +12,7 @@ using Microsoft.Win32;
 using System.Xml;
 using System.Collections;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace FSShortcut
 {
@@ -36,6 +37,11 @@ namespace FSShortcut
             timer1.Interval = 1000;
             timer1.Enabled = true;
             timer1.Tick += new EventHandler(timer1EventProcessor);
+            Properties.Settings.Default.Reload();
+            if (Properties.Settings.Default.SaveShortcut != "")
+            {
+                shortcuts = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(Properties.Settings.Default.SaveShortcut);
+            }
         }
 
         private void hook_KeyDown(object sender, KeyEventArgs e)
@@ -129,6 +135,13 @@ namespace FSShortcut
         {
             IntroNSetting intro = new IntroNSetting();
             intro.ShowDialog();
+        }
+
+        private void MainPanel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string jsonShortcuts = JsonConvert.SerializeObject(shortcuts);
+            Properties.Settings.Default.SaveShortcut = jsonShortcuts;
+            Properties.Settings.Default.Save();
         }
     }
    

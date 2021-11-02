@@ -83,6 +83,7 @@ namespace FSShortcut
             this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "MainPanel";
             this.Text = "显示操作强化版";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainPanel_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
