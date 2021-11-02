@@ -190,8 +190,16 @@ namespace FSShortcut
 
         private void clearAll_Click(object sender, EventArgs e)
         {
-            shortcuts.Clear();
-            shortcutGrid.Rows.Clear();
+            DialogResult dialogResult = MessageBox.Show("开弓没有回头箭", "你会后悔的——又或者你已经去过天堂了？", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                shortcuts.Clear();
+                shortcutGrid.Rows.Clear();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
         }
 
         private void AddShortcut_Click(object sender, EventArgs e)

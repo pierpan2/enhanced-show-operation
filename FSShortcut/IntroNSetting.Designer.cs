@@ -37,6 +37,7 @@ namespace FSShortcut
             this.FontSize = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkLive2D = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.duration)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@ namespace FSShortcut
             this.followCursor.Checked = true;
             this.followCursor.CheckState = System.Windows.Forms.CheckState.Checked;
             this.followCursor.Font = new System.Drawing.Font("黑体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.followCursor.Location = new System.Drawing.Point(28, 250);
+            this.followCursor.Location = new System.Drawing.Point(17, 225);
             this.followCursor.Name = "followCursor";
             this.followCursor.Size = new System.Drawing.Size(216, 29);
             this.followCursor.TabIndex = 1;
@@ -147,12 +148,27 @@ namespace FSShortcut
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // checkLive2D
+            // 
+            this.checkLive2D.AutoSize = true;
+            this.checkLive2D.Checked = true;
+            this.checkLive2D.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkLive2D.Font = new System.Drawing.Font("黑体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkLive2D.Location = new System.Drawing.Point(17, 260);
+            this.checkLive2D.Name = "checkLive2D";
+            this.checkLive2D.Size = new System.Drawing.Size(268, 29);
+            this.checkLive2D.TabIndex = 8;
+            this.checkLive2D.Text = "只在Live2D时显示？";
+            this.checkLive2D.UseVisualStyleBackColor = true;
+            this.checkLive2D.CheckedChanged += new System.EventHandler(this.checkLive2D_CheckedChanged);
+            // 
             // IntroNSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 538);
             this.ControlBox = false;
+            this.Controls.Add(this.checkLive2D);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -182,5 +198,6 @@ namespace FSShortcut
         private System.Windows.Forms.Label FontSize;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox checkLive2D;
     }
 }

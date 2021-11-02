@@ -22,6 +22,7 @@ namespace FSShortcut
             FontSize.ForeColor = fontColor;
             FontSize.BackColor = backColor;
             followCursor.Checked = MainPanel.followCursor;
+            checkLive2D.Checked = MainPanel.onlyLive2D;
             duration.Value = (decimal)(Properties.Settings.Default.Duration_ms / 1000.0);
         }
 
@@ -77,7 +78,7 @@ namespace FSShortcut
 
         private void button2_Click(object sender, EventArgs e)
         {
-               DialogResult dialogResult = MessageBox.Show("它还挺好看的", "再好好想想？", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("它还挺好看的", "再好好想想？", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 fontSize = new Font("黑体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -85,6 +86,7 @@ namespace FSShortcut
                 backColor = DefaultBackColor;
                 Shortcut.duration = 800;
                 followCursor.Checked = false;
+                checkLive2D.Checked = false;
                 string keepShortcut = Properties.Settings.Default.SaveShortcut;
                 Properties.Settings.Default.Reset();
                 Properties.Settings.Default.SaveShortcut = keepShortcut;
@@ -94,6 +96,11 @@ namespace FSShortcut
             {
                 return;
             }
+        }
+
+        private void checkLive2D_CheckedChanged(object sender, EventArgs e)
+        {
+            MainPanel.onlyLive2D = checkLive2D.Checked;
         }
     }
 }

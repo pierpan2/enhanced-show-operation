@@ -94,5 +94,17 @@ namespace FSShortcut.Properties {
                 this["Duration_ms"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool OnlyLive2D {
+            get {
+                return ((bool)(this["OnlyLive2D"]));
+            }
+            set {
+                this["OnlyLive2D"] = value;
+            }
+        }
     }
 }

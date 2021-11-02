@@ -27,6 +27,7 @@ namespace FSShortcut
         static List<string> CONTROL_KEYS = new List<string>() {"LShiftKey", "LControlKey", "LMenu", "RShiftKey", "RControlKey", "RMenu", "LWin", "RWin" };
         public static string keyBoardInput = "";
         public static bool followCursor = Properties.Settings.Default.FollowCursor;
+        public static bool onlyLive2D = Properties.Settings.Default.OnlyLive2D;
 
         public MainPanel()
         {
@@ -91,13 +92,19 @@ namespace FSShortcut
         {
             if (tip == "") return;
             // 窗口不在Live2D就爬
-            Process[] processes = Process.GetProcesses();
-            foreach (Process p in processes)
+            if (onlyLive2D)
             {
-                if (!String.IsNullOrEmpty(p.MainWindowTitle) && p.MainWindowTitle.StartsWith("Live2D Cubism Editor"))
+                bool focusLive2D = false;
+                Process[] processes = Process.GetProcesses();
+                foreach (Process p in processes)
                 {
-                    Console.WriteLine(p.MainWindowTitle);
+                    // Console.WriteLine(p.ProcessName );
+                    if (p.MainWindowTitle.Contains("Live2D Cubism Editor") && GetForegroundWindow() == p.MainWindowHandle)
+                    {
+                        focusLive2D = true;
+                    }
                 }
+                if (!focusLive2D) return;
             }
             //mesBox.DialogResult = DialogResult.Cancel;
             if (followCursor)
@@ -114,6 +121,8 @@ namespace FSShortcut
             label1.Font = IntroNSetting.fontSize;
             label1.ForeColor = IntroNSetting.fontColor;
         }
+        [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
+        private static extern IntPtr GetForegroundWindow();
 
         private string showAll(List<string> mylist)
         {
@@ -162,6 +171,7 @@ namespace FSShortcut
         {
             Properties.Settings.Default.SaveShortcut = JsonConvert.SerializeObject(shortcuts);
             Properties.Settings.Default.FollowCursor = followCursor;
+            Properties.Settings.Default.OnlyLive2D = onlyLive2D;
             Properties.Settings.Default.Font = JsonConvert.SerializeObject(IntroNSetting.fontSize);
             Properties.Settings.Default.FontColor = JsonConvert.SerializeObject(IntroNSetting.fontColor);
             Properties.Settings.Default.BackColor = JsonConvert.SerializeObject(IntroNSetting.backColor);
