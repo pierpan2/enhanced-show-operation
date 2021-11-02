@@ -21,6 +21,8 @@ namespace FSShortcut
             FontSize.Font = fontSize;
             FontSize.ForeColor = fontColor;
             FontSize.BackColor = backColor;
+            followCursor.Checked = MainPanel.followCursor;
+            duration.Value = (decimal)(Properties.Settings.Default.Duration_ms / 1000.0);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace FSShortcut
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             Shortcut.duration = (int)(duration.Value * 1000);
+            Properties.Settings.Default.Duration_ms = Shortcut.duration;
         }
 
         private void FontSize_MouseClick(object sender, MouseEventArgs e)
@@ -65,6 +68,32 @@ namespace FSShortcut
             newBackColor.ShowDialog();
             FontSize.BackColor = newBackColor.Color;
             backColor = newBackColor.Color;
+        }
+
+        private void followCursor_CheckedChanged(object sender, EventArgs e)
+        {
+            MainPanel.followCursor = followCursor.Checked;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+               DialogResult dialogResult = MessageBox.Show("它还挺好看的", "再好好想想？", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                fontSize = new Font("黑体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                fontColor = Color.Black;
+                backColor = DefaultBackColor;
+                Shortcut.duration = 800;
+                followCursor.Checked = false;
+                string keepShortcut = Properties.Settings.Default.SaveShortcut;
+                Properties.Settings.Default.Reset();
+                Properties.Settings.Default.SaveShortcut = keepShortcut;
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
         }
     }
 }

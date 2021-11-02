@@ -36,6 +36,7 @@ namespace FSShortcut
             this.button1 = new System.Windows.Forms.Button();
             this.FontSize = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.duration)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@ namespace FSShortcut
             this.followCursor.TabIndex = 1;
             this.followCursor.Text = "跟随鼠标显示？";
             this.followCursor.UseVisualStyleBackColor = true;
+            this.followCursor.CheckedChanged += new System.EventHandler(this.followCursor_CheckedChanged);
             // 
             // duration
             // 
@@ -133,12 +135,25 @@ namespace FSShortcut
             this.label3.Text = "点我修改背景颜色";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(685, 430);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(43, 102);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "重置";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // IntroNSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 538);
             this.ControlBox = false;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.FontSize);
@@ -146,9 +161,9 @@ namespace FSShortcut
             this.Controls.Add(this.duration);
             this.Controls.Add(this.followCursor);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "IntroNSetting";
             this.Text = "介绍和设置";
             ((System.ComponentModel.ISupportInitialize)(this.duration)).EndInit();
@@ -166,5 +181,6 @@ namespace FSShortcut
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label FontSize;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -12,7 +12,7 @@ namespace FSShortcut
 {
     public partial class Shortcut : Form
     {
-        public static int duration = 800;
+        public static int duration = Properties.Settings.Default.Duration_ms;
         public Shortcut(string tip)
         {
             InitializeComponent();

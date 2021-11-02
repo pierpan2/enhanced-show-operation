@@ -13,6 +13,7 @@ using System.Xml;
 using System.Collections;
 using System.IO;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace FSShortcut
 {
@@ -25,6 +26,7 @@ namespace FSShortcut
         Dictionary<string, List<string>> shortcuts = new Dictionary<string, List<string>>();
         static List<string> CONTROL_KEYS = new List<string>() {"LShiftKey", "LControlKey", "LMenu", "RShiftKey", "RControlKey", "RMenu", "LWin", "RWin" };
         public static string keyBoardInput = "";
+        public static bool followCursor = Properties.Settings.Default.FollowCursor;
 
         public MainPanel()
         {
@@ -42,6 +44,13 @@ namespace FSShortcut
             {
                 shortcuts = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(Properties.Settings.Default.SaveShortcut);
             }
+            if(Properties.Settings.Default.Font != "")
+                IntroNSetting.fontSize = JsonConvert.DeserializeObject<Font>(Properties.Settings.Default.Font);
+            if (Properties.Settings.Default.FontColor != "")
+                IntroNSetting.fontColor = JsonConvert.DeserializeObject<Color>(Properties.Settings.Default.FontColor);
+            if (Properties.Settings.Default.BackColor != "")
+                IntroNSetting.backColor = JsonConvert.DeserializeObject<Color>(Properties.Settings.Default.BackColor);
+            // Shortcut.duration = Properties.Settings.Default.Duration_ms;
         }
 
         private void hook_KeyDown(object sender, KeyEventArgs e)
@@ -81,12 +90,24 @@ namespace FSShortcut
         private void showTip(string tip)
         {
             if (tip == "") return;
+            // 窗口不在Live2D就爬
+            Process[] processes = Process.GetProcesses();
+            foreach (Process p in processes)
+            {
+                if (!String.IsNullOrEmpty(p.MainWindowTitle) && p.MainWindowTitle.StartsWith("Live2D Cubism Editor"))
+                {
+                    Console.WriteLine(p.MainWindowTitle);
+                }
+            }
             //mesBox.DialogResult = DialogResult.Cancel;
-            mesBox.Dispose();
-            mesBox = new Shortcut(tip);
-            mesBox.StartPosition = FormStartPosition.Manual;
-            mesBox.Location = new Point(MousePosition.X + 30, MousePosition.Y + 30);
-            mesBox.Show();
+            if (followCursor)
+            {
+                mesBox.Dispose();
+                mesBox = new Shortcut(tip);
+                mesBox.StartPosition = FormStartPosition.Manual;
+                mesBox.Location = new Point(MousePosition.X + 30, MousePosition.Y + 30);
+                mesBox.Show();
+            }
 
             label1.Text = tip;
             label1.Location = new Point((this.Width - label1.Width) / 2, label1.Location.Y);
@@ -139,8 +160,12 @@ namespace FSShortcut
 
         private void MainPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string jsonShortcuts = JsonConvert.SerializeObject(shortcuts);
-            Properties.Settings.Default.SaveShortcut = jsonShortcuts;
+            Properties.Settings.Default.SaveShortcut = JsonConvert.SerializeObject(shortcuts);
+            Properties.Settings.Default.FollowCursor = followCursor;
+            Properties.Settings.Default.Font = JsonConvert.SerializeObject(IntroNSetting.fontSize);
+            Properties.Settings.Default.FontColor = JsonConvert.SerializeObject(IntroNSetting.fontColor);
+            Properties.Settings.Default.BackColor = JsonConvert.SerializeObject(IntroNSetting.backColor);
+            Properties.Settings.Default.Duration_ms = Shortcut.duration;
             Properties.Settings.Default.Save();
         }
     }

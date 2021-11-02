@@ -49,7 +49,7 @@ namespace FSShortcut
             this.shortcutGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.shortcutGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.shortcutGrid.Location = new System.Drawing.Point(132, 67);
-            this.shortcutGrid.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.shortcutGrid.Margin = new System.Windows.Forms.Padding(5);
             this.shortcutGrid.Name = "shortcutGrid";
             this.shortcutGrid.RowHeadersWidth = 51;
             this.shortcutGrid.RowTemplate.Height = 27;
@@ -63,7 +63,7 @@ namespace FSShortcut
             this.LoadLive2D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LoadLive2D.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LoadLive2D.Location = new System.Drawing.Point(108, 531);
-            this.LoadLive2D.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.LoadLive2D.Margin = new System.Windows.Forms.Padding(5);
             this.LoadLive2D.Name = "LoadLive2D";
             this.LoadLive2D.Size = new System.Drawing.Size(146, 97);
             this.LoadLive2D.TabIndex = 1;
@@ -76,7 +76,7 @@ namespace FSShortcut
             this.clearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clearAll.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.clearAll.Location = new System.Drawing.Point(736, 577);
-            this.clearAll.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.clearAll.Margin = new System.Windows.Forms.Padding(5);
             this.clearAll.Name = "clearAll";
             this.clearAll.Size = new System.Drawing.Size(187, 67);
             this.clearAll.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace FSShortcut
             this.AddShortcut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AddShortcut.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.AddShortcut.Location = new System.Drawing.Point(314, 549);
-            this.AddShortcut.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AddShortcut.Margin = new System.Windows.Forms.Padding(5);
             this.AddShortcut.Name = "AddShortcut";
             this.AddShortcut.Size = new System.Drawing.Size(168, 80);
             this.AddShortcut.TabIndex = 3;
@@ -102,7 +102,7 @@ namespace FSShortcut
             this.DeleteShortcut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DeleteShortcut.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.DeleteShortcut.Location = new System.Drawing.Point(541, 531);
-            this.DeleteShortcut.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DeleteShortcut.Margin = new System.Windows.Forms.Padding(5);
             this.DeleteShortcut.Name = "DeleteShortcut";
             this.DeleteShortcut.Size = new System.Drawing.Size(174, 96);
             this.DeleteShortcut.TabIndex = 4;
@@ -121,11 +121,11 @@ namespace FSShortcut
             this.Controls.Add(this.LoadLive2D);
             this.Controls.Add(this.shortcutGrid);
             this.Font = new System.Drawing.Font("宋体", 15F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(1018, 16634);
             this.MinimumSize = new System.Drawing.Size(1018, 696);
             this.Name = "KeySetting";
-            this.Text = "KeySetting";
+            this.Text = "快捷键设置";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KeySetting_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.shortcutGrid)).EndInit();
             this.ResumeLayout(false);
