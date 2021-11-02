@@ -23,6 +23,7 @@ namespace FSShortcut
         //private object pivotGridControl1;
         Dictionary<string, List<string>> shortcuts = new Dictionary<string, List<string>>();
         static List<string> CONTROL_KEYS = new List<string>() {"LShiftKey", "LControlKey", "LMenu", "RShiftKey", "RControlKey", "RMenu", "LWin", "RWin" };
+        public static string keyBoardInput = "";
 
         public MainPanel()
         {
@@ -68,7 +69,7 @@ namespace FSShortcut
                     showTip(label1.Text);
                 }
             }
-
+            keyBoardInput = combinedKey;
 
         }
 

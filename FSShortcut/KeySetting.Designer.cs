@@ -32,6 +32,7 @@ namespace FSShortcut
             this.shortcutGrid = new System.Windows.Forms.DataGridView();
             this.LoadLive2D = new System.Windows.Forms.Button();
             this.clearAll = new System.Windows.Forms.Button();
+            this.AddShortcut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.shortcutGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@ namespace FSShortcut
             // 
             this.clearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clearAll.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.clearAll.Location = new System.Drawing.Point(262, 394);
+            this.clearAll.Location = new System.Drawing.Point(446, 394);
             this.clearAll.Name = "clearAll";
             this.clearAll.Size = new System.Drawing.Size(140, 51);
             this.clearAll.TabIndex = 2;
@@ -75,11 +76,24 @@ namespace FSShortcut
             this.clearAll.UseVisualStyleBackColor = true;
             this.clearAll.Click += new System.EventHandler(this.clearAll_Click);
             // 
+            // AddShortcut
+            // 
+            this.AddShortcut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddShortcut.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.AddShortcut.Location = new System.Drawing.Point(263, 394);
+            this.AddShortcut.Name = "AddShortcut";
+            this.AddShortcut.Size = new System.Drawing.Size(140, 51);
+            this.AddShortcut.TabIndex = 3;
+            this.AddShortcut.Text = "添加";
+            this.AddShortcut.UseVisualStyleBackColor = true;
+            this.AddShortcut.Click += new System.EventHandler(this.AddShortcut_Click);
+            // 
             // KeySetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 457);
+            this.Controls.Add(this.AddShortcut);
             this.Controls.Add(this.clearAll);
             this.Controls.Add(this.LoadLive2D);
             this.Controls.Add(this.shortcutGrid);
@@ -92,9 +106,9 @@ namespace FSShortcut
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView shortcutGrid;
         private System.Windows.Forms.Button LoadLive2D;
         private System.Windows.Forms.Button clearAll;
+        private System.Windows.Forms.Button AddShortcut;
+        private System.Windows.Forms.DataGridView shortcutGrid;
     }
 }

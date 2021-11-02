@@ -42,6 +42,28 @@ namespace FSShortcut
         }
         private void SetShortcut(int row, int col)
         {
+            // 录入新快捷键
+            MainPanel.keyBoardInput = "";
+            InputShortcut inputShortcutForm = new InputShortcut();
+            inputShortcutForm.ShowDialog();
+            // 无效就遣返
+            if(MainPanel.keyBoardInput == "" || MainPanel.keyBoardInput == shortcutGrid.Rows[row].Cells[0].Value.ToString())
+            {
+                return;
+            }
+            // 增改快捷键
+            if(!shortcuts.ContainsKey(MainPanel.keyBoardInput))
+            {
+                shortcuts.Add(MainPanel.keyBoardInput, new List<string>());
+            }
+            shortcuts[MainPanel.keyBoardInput].Add(shortcutGrid.Rows[row].Cells[1].Value.ToString());
+            shortcuts[shortcutGrid.Rows[row].Cells[0].Value.ToString()].Remove(shortcutGrid.Rows[row].Cells[1].Value.ToString());
+            if (shortcuts[shortcutGrid.Rows[row].Cells[0].Value.ToString()].Count == 0)
+            {
+                shortcuts.Remove(shortcutGrid.Rows[row].Cells[0].Value.ToString());
+            }
+            // 最后改表格
+            shortcutGrid.Rows[row].Cells[0].Value = MainPanel.keyBoardInput;
         }
         private void LoadLive2D_Click(object sender, EventArgs e)
         {
@@ -53,7 +75,7 @@ namespace FSShortcut
             shortcutGrid.Rows.Clear();
             foreach (KeyValuePair<string, List<string>> shortcut in shortcuts)
             {
-                foreach (String function in shortcut.Value)
+                foreach (string function in shortcut.Value)
                 {
                     shortcutGrid.Rows.Add(shortcut.Key, function);
                 }
@@ -154,7 +176,7 @@ namespace FSShortcut
                 }
             }
             shortcuts[shortcutGrid.Rows[e.RowIndex].Cells[0].Value.ToString()] = newShortcuts;
-            refreshDGV();
+            // refreshDGV();
         }
 
         private void KeySetting_FormClosed(object sender, FormClosedEventArgs e)
@@ -166,6 +188,12 @@ namespace FSShortcut
         {
             shortcuts = new Dictionary<string, List<string>>();
             shortcutGrid.Rows.Clear();
+        }
+
+        private void AddShortcut_Click(object sender, EventArgs e)
+        {
+            shortcuts.Add("新快捷键", new List<string>() {"显示功能文本" });
+            shortcutGrid.Rows.Add("新快捷键", "显示功能文本");
         }
     }
 }
