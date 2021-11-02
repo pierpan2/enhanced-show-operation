@@ -72,6 +72,9 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -87,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clickmonitor.cs" />
+    <Compile Include="IntroNSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroNSetting.Designer.cs">
+      <DependentUpon>IntroNSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="InputShortcut.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +125,9 @@
     <EmbeddedResource Include="InputShortcut.resx">
       <DependentUpon>InputShortcut.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IntroNSetting.resx">
+      <DependentUpon>IntroNSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KeySetting.resx">
       <DependentUpon>KeySetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +147,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.manifest" />
     <None Include="FSShortcut_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

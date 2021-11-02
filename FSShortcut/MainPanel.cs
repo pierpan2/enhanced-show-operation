@@ -57,16 +57,15 @@ namespace FSShortcut
             combinedKey += (combinedKey == "" ? "" : "+") + funcKey;
             if (shortcuts.ContainsKey(combinedKey))
             {
-                label1.Text = "";
+                string commandsToShow = "";
                 foreach (string command in shortcuts[combinedKey])
                 {
                     Console.WriteLine(command);
-                    label1.Text += (label1.Text == "" ? "" : "\n") + command;
+                    commandsToShow += (commandsToShow == "" ? "" : "\n") + command;
                 }
-                label1.Location = new Point((this.Width - label1.Width) / 2, label1.Location.Y);
                 if (!Program.settingMode)
                 {
-                    showTip(label1.Text);
+                    showTip(commandsToShow);
                 }
             }
             keyBoardInput = combinedKey;
@@ -82,6 +81,11 @@ namespace FSShortcut
             mesBox.StartPosition = FormStartPosition.Manual;
             mesBox.Location = new Point(MousePosition.X + 30, MousePosition.Y + 30);
             mesBox.Show();
+
+            label1.Text = tip;
+            label1.Location = new Point((this.Width - label1.Width) / 2, label1.Location.Y);
+            label1.Font = IntroNSetting.fontSize;
+            label1.ForeColor = IntroNSetting.fontColor;
         }
 
         private string showAll(List<string> mylist)
@@ -118,6 +122,13 @@ namespace FSShortcut
             k_hook.KeyDownEvent += new KeyEventHandler(hook_KeyDown);//钩住键按下   
             //k_hook.KeyPressEvent += Hook_KeyPressEvent;
             k_hook.Start();//安装键盘钩子
+            this.BackColor = IntroNSetting.backColor;
+        }
+
+        private void Intro_Click(object sender, EventArgs e)
+        {
+            IntroNSetting intro = new IntroNSetting();
+            intro.ShowDialog();
         }
     }
    

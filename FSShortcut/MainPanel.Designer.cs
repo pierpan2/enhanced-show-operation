@@ -29,51 +29,69 @@ namespace FSShortcut
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             this.SettingBut = new System.Windows.Forms.Button();
+            this.Intro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(312, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            label1.Location = new System.Drawing.Point(309, 96);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(137, 40);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Click += new System.EventHandler(label1_Click);
             // 
             // SettingBut
             // 
+            this.SettingBut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SettingBut.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SettingBut.Location = new System.Drawing.Point(97, 206);
+            this.SettingBut.Location = new System.Drawing.Point(116, 223);
             this.SettingBut.Name = "SettingBut";
-            this.SettingBut.Size = new System.Drawing.Size(175, 57);
+            this.SettingBut.Size = new System.Drawing.Size(124, 79);
             this.SettingBut.TabIndex = 1;
             this.SettingBut.Text = "快捷键设置";
             this.SettingBut.UseVisualStyleBackColor = true;
             this.SettingBut.Click += new System.EventHandler(this.SettingBut_Click);
             // 
+            // Intro
+            // 
+            this.Intro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Intro.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Intro.Location = new System.Drawing.Point(482, 266);
+            this.Intro.Name = "Intro";
+            this.Intro.Size = new System.Drawing.Size(236, 52);
+            this.Intro.TabIndex = 2;
+            this.Intro.Text = "功能介绍和设置";
+            this.Intro.UseVisualStyleBackColor = true;
+            this.Intro.Click += new System.EventHandler(this.Intro_Click);
+            // 
             // MainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 303);
+            this.ClientSize = new System.Drawing.Size(782, 353);
+            this.Controls.Add(this.Intro);
             this.Controls.Add(this.SettingBut);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(label1);
+            this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "MainPanel";
-            this.Text = "MainPanel";
+            this.Text = "显示操作强化版";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SettingBut;
+        private System.Windows.Forms.Button Intro;
+        public static System.Windows.Forms.Label label1;
     }
 }
 

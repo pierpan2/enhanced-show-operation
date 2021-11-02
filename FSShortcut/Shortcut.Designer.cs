@@ -64,6 +64,7 @@ namespace FSShortcut
             this.Name = "Shortcut";
             this.Text = "Shortcut";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Shortcut_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -186,14 +186,40 @@ namespace FSShortcut
 
         private void clearAll_Click(object sender, EventArgs e)
         {
-            shortcuts = new Dictionary<string, List<string>>();
+            shortcuts.Clear();
             shortcutGrid.Rows.Clear();
         }
 
         private void AddShortcut_Click(object sender, EventArgs e)
         {
-            shortcuts.Add("新快捷键", new List<string>() {"显示功能文本" });
-            shortcutGrid.Rows.Add("新快捷键", "显示功能文本");
+            string newShortcutName = "新快捷键";
+            if (shortcuts.ContainsKey(newShortcutName))
+            {
+                int i = 2;
+                while (shortcuts.ContainsKey(newShortcutName + i.ToString())) i++;
+                newShortcutName += i.ToString();
+            }
+            shortcuts.Add(newShortcutName, new List<string>() { "显示功能文本" });
+            shortcutGrid.Rows.Add(newShortcutName, "显示功能文本");
+            shortcutGrid.CurrentCell = shortcutGrid.Rows[shortcutGrid.RowCount - 1].Cells[0];
+        }
+
+        private void DeleteShortcut_Click(object sender, EventArgs e)
+        {
+            if(shortcutGrid.SelectedRows == null)
+            {
+                return;
+            }
+            
+            foreach(DataGridViewRow row in shortcutGrid.SelectedRows)
+            {
+                shortcuts[shortcutGrid.Rows[row.Index].Cells[0].Value.ToString()].Remove(shortcutGrid.Rows[row.Index].Cells[1].Value.ToString());
+                if (shortcuts[shortcutGrid.Rows[row.Index].Cells[0].Value.ToString()].Count == 0)
+                {
+                    shortcuts.Remove(shortcutGrid.Rows[row.Index].Cells[0].Value.ToString());
+                }
+                shortcutGrid.Rows.RemoveAt(row.Index);
+            }
         }
     }
 }
