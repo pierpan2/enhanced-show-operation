@@ -79,10 +79,7 @@ namespace FSShortcut
                     Console.WriteLine(command);
                     commandsToShow += (commandsToShow == "" ? "" : "\n") + command;
                 }
-                if (!Program.settingMode)
-                {
-                    showTip(commandsToShow);
-                }
+                showTip(commandsToShow);
             }
             keyBoardInput = combinedKey;
 
@@ -107,14 +104,20 @@ namespace FSShortcut
                 if (!focusLive2D) return;
             }
             //mesBox.DialogResult = DialogResult.Cancel;
-            if (followCursor)
+            mesBox.Dispose();
+            mesBox = new Shortcut(tip);
+            mesBox.StartPosition = FormStartPosition.Manual;
+            mesBox.Location = new Point(MousePosition.X + 30, MousePosition.Y + 30);
+            mesBox.Show();
+            if (!Program.settingMode && followCursor)
             {
-                mesBox.Dispose();
-                mesBox = new Shortcut(tip);
-                mesBox.StartPosition = FormStartPosition.Manual;
-                mesBox.Location = new Point(MousePosition.X + 30, MousePosition.Y + 30);
-                mesBox.Show();
+                mesBox.Visible = true;
             }
+            else
+            {
+                mesBox.Visible = false;
+            }
+
 
             label1.Text = tip;
             label1.Location = new Point((this.Width - label1.Width) / 2, label1.Location.Y);

@@ -29,6 +29,7 @@ namespace FSShortcut
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPanel));
             label1 = new System.Windows.Forms.Label();
             this.SettingBut = new System.Windows.Forms.Button();
             this.Intro = new System.Windows.Forms.Button();
@@ -80,6 +81,7 @@ namespace FSShortcut
             this.Controls.Add(this.Intro);
             this.Controls.Add(this.SettingBut);
             this.Controls.Add(label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "MainPanel";
             this.Text = "显示操作强化版";

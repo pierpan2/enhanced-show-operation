@@ -29,6 +29,7 @@ namespace FSShortcut
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeySetting));
             this.shortcutGrid = new System.Windows.Forms.DataGridView();
             this.LoadLive2D = new System.Windows.Forms.Button();
             this.clearAll = new System.Windows.Forms.Button();
@@ -121,6 +122,7 @@ namespace FSShortcut
             this.Controls.Add(this.LoadLive2D);
             this.Controls.Add(this.shortcutGrid);
             this.Font = new System.Drawing.Font("宋体", 15F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(1018, 16634);
             this.MinimumSize = new System.Drawing.Size(1018, 696);
