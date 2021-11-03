@@ -14,6 +14,7 @@ using System.Collections;
 using System.IO;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Threading;
 
 namespace FSShortcut
 {
@@ -28,6 +29,7 @@ namespace FSShortcut
         public static string keyBoardInput = "";
         public static bool followCursor = Properties.Settings.Default.FollowCursor;
         public static bool onlyLive2D = Properties.Settings.Default.OnlyLive2D;
+        public static Process live2dProcess = new Process();
 
         public MainPanel()
         {
@@ -36,10 +38,10 @@ namespace FSShortcut
             tp.ShowAlways = true;
             // this.Opacity = 0.8;
 
-            Timer timer1 = new Timer();
+            System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
             timer1.Interval = 1000;
             timer1.Enabled = true;
-            timer1.Tick += new EventHandler(timer1EventProcessor);
+            timer1.Tick += new EventHandler(timer1EventProcessor); 
             Properties.Settings.Default.Reload();
             if (Properties.Settings.Default.SaveShortcut != "")
             {
@@ -52,6 +54,17 @@ namespace FSShortcut
             if (Properties.Settings.Default.BackColor != "")
                 IntroNSetting.backColor = JsonConvert.DeserializeObject<Color>(Properties.Settings.Default.BackColor);
             // Shortcut.duration = Properties.Settings.Default.Duration_ms;
+
+            Process[] processes = Process.GetProcesses();
+            //Console.WriteLine(processes.Count());
+            foreach (Process p in processes)
+            {
+                // Console.WriteLine(p.ProcessName );
+                if (p.MainWindowTitle.Contains("Live2D Cubism Editor"))
+                {
+                    live2dProcess = p;
+                }
+            }
         }
 
         private void hook_KeyDown(object sender, KeyEventArgs e)
@@ -79,7 +92,12 @@ namespace FSShortcut
                     Console.WriteLine(command);
                     commandsToShow += (commandsToShow == "" ? "" : "\n") + command;
                 }
-                showTip(commandsToShow);
+                try
+                {
+                    showTip(commandsToShow);
+                }
+                catch { };
+                
             }
             keyBoardInput = combinedKey;
 
@@ -92,11 +110,12 @@ namespace FSShortcut
             if (onlyLive2D)
             {
                 bool focusLive2D = false;
-                Process[] processes = Process.GetProcesses();
-                foreach (Process p in processes)
+                IntPtr foreWindow = GetForegroundWindow();
+                // Console.WriteLine(p.ProcessName );
+                if (live2dProcess.MainWindowTitle.Contains("Live2D Cubism Editor"))
                 {
-                    // Console.WriteLine(p.ProcessName );
-                    if (p.MainWindowTitle.Contains("Live2D Cubism Editor") && GetForegroundWindow() == p.MainWindowHandle)
+                    // Console.WriteLine(GetForegroundWindow());
+                    if (foreWindow == live2dProcess.MainWindowHandle)
                     {
                         focusLive2D = true;
                     }

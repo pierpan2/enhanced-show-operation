@@ -160,11 +160,11 @@ namespace FSShortcut
             this.checkLive2D.Checked = true;
             this.checkLive2D.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkLive2D.Font = new System.Drawing.Font("黑体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.checkLive2D.Location = new System.Drawing.Point(36, 333);
+            this.checkLive2D.Location = new System.Drawing.Point(24, 336);
             this.checkLive2D.Name = "checkLive2D";
-            this.checkLive2D.Size = new System.Drawing.Size(268, 29);
+            this.checkLive2D.Size = new System.Drawing.Size(476, 29);
             this.checkLive2D.TabIndex = 8;
-            this.checkLive2D.Text = "只在Live2D时显示？";
+            this.checkLive2D.Text = "只在Live2D时显示(重启Live2D需重选)";
             this.checkLive2D.UseVisualStyleBackColor = false;
             this.checkLive2D.CheckedChanged += new System.EventHandler(this.checkLive2D_CheckedChanged);
             // 

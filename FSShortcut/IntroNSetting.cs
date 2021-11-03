@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -101,6 +102,21 @@ namespace FSShortcut
         private void checkLive2D_CheckedChanged(object sender, EventArgs e)
         {
             MainPanel.onlyLive2D = checkLive2D.Checked;
+            if(checkLive2D.Checked)
+            {
+                Process[] processes = Process.GetProcesses();
+                //Console.WriteLine(processes.Count());
+                foreach (Process p in processes)
+                {
+                    // Console.WriteLine(p.ProcessName );
+                    if (p.MainWindowTitle.Contains("Live2D Cubism Editor"))
+                    {
+                        MainPanel.live2dProcess = p;
+                        return;
+                    }
+                }
+                MainPanel.live2dProcess = new Process();
+            }
         }
     }
 }
