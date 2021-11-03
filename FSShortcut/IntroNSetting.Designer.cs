@@ -49,8 +49,13 @@ namespace FSShortcut
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(488, 168);
             this.label1.TabIndex = 0;
-            this.label1.Text = "底下四个按钮：\n加载Live2D快捷键，添加，删除，清空\n点左边快捷键录入，双击右边写字\n最左边空白列用来选中删除\n桌面捕获可以用跟随鼠标那个\n窗口捕捉添加主界面" +
-    "显示。";
+            this.label1.Text = 
+                "底下四个按钮：\n" +
+                "加载Live2D快捷键，添加，删除，清空\n" +
+                "点左边快捷键录入，双击右边写字\n" +
+                "最左边空白列用来选中删除\n" +
+                "桌面捕获可以用跟随鼠标那个\n" +
+                "窗口捕捉添加主界面显示。";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // followCursor
